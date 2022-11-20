@@ -47,7 +47,7 @@ export default function Dashboard() {
   function addTodo(todo) {
     addDoc(collectionRef, {
       todo: todo,
-      time: Date.now().toLocaleString("en-UK"),
+      time: new Date().toLocaleString("en-UK"),
     });
   }
 
