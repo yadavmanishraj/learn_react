@@ -4,6 +4,6 @@ import { AuthContext } from "./FormApp";
 
 export default function RequireAuth({ children }) {
   const userContext = useContext(AuthContext);
-  if (userContext.email) return children;
+  if (userContext.user) return children;
   return <Navigate to="/login" />;
 }

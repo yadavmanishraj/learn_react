@@ -12,13 +12,8 @@ export default function Login() {
     setEmail(e.target.value);
   };
 
-  if (userContext.email) {
+  if (userContext.user) {
     return <Navigate to="/" />;
-  }
-
-  function reset() {
-    setPassword("");
-    setEmail("");
   }
 
   return (
@@ -42,10 +37,20 @@ export default function Login() {
           variant={"solid"}
           colorScheme="blue"
           type="button"
-          onClick={() => userContext.authenticate(email)}
+          onClick={() => userContext.authenticate(email, password)}
           value="Click"
         >
           Login
+        </Button>
+        <Button
+          w={"100%"}
+          variant={"solid"}
+          colorScheme="blue"
+          type="button"
+          onClick={() => userContext.authenticate(email, password)}
+          value="Click"
+        >
+          Register
         </Button>
         <Link to={"/namesers"}>Another Page</Link>
       </VStack>
