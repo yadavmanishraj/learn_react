@@ -34,6 +34,7 @@ export default function Login() {
         />
         <Button
           w={"100%"}
+          colorScheme="orange"
           variant={"solid"}
           type="button"
           onClick={() => userContext.authenticate(email, password)}
@@ -42,6 +43,7 @@ export default function Login() {
           Login
         </Button>
         <Button
+          colorScheme="orange"
           w={"100%"}
           variant={"solid"}
           type="button"

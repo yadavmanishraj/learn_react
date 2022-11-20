@@ -1,4 +1,4 @@
-import { Slide } from "@chakra-ui/react";
+import { Slide, useToast } from "@chakra-ui/react";
 import {
   createUserWithEmailAndPassword,
   onAuthStateChanged,
@@ -23,11 +23,14 @@ const AuthContext = createContext(initialValue);
 
 export default function FormApp() {
   const [user, setUser] = useState(initialValue);
+  const toast = useToast();
 
   const authenticate = (email, password) => {
-    signInWithEmailAndPassword(auth, email, password).catch((err) => {
-      createUserWithEmailAndPassword(auth, email, password);
-    });
+    signInWithEmailAndPassword(auth, email, password)
+      .catch((err) => {
+        createUserWithEmailAndPassword(auth, email, password);
+      })
+      .catch((e) => toast({ title: "Something went worng", status: "error" }));
   };
 
   const deauthenticate = () => {
