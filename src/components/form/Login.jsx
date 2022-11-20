@@ -17,7 +17,7 @@ export default function Login() {
   }
 
   return (
-    <Container>
+    <Container colorScheme={"orange"}>
       <VStack alignItems={"flex-start"}>
         <Text fontSize={"xx-large"}>Login with Email</Text>
         <Input
@@ -29,13 +29,12 @@ export default function Login() {
         <Input
           type="password"
           value={password}
-          placeholder="e.g. grublin777@gmail.com"
+          placeholder="Password"
           onChange={(e) => setPassword(e.target.value)}
         />
         <Button
           w={"100%"}
           variant={"solid"}
-          colorScheme="blue"
           type="button"
           onClick={() => userContext.authenticate(email, password)}
           value="Click"
@@ -45,7 +44,6 @@ export default function Login() {
         <Button
           w={"100%"}
           variant={"solid"}
-          colorScheme="blue"
           type="button"
           onClick={() => userContext.authenticate(email, password)}
           value="Click"
