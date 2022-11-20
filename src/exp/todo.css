@@ -1,0 +1,42 @@
+input {
+    height: 50px;
+    width: 500px;
+    border-radius: 10px;
+    border: 4px solid rgb(199, 199, 199);
+    padding-left: 20px;
+    outline: none;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    padding-left: 100px;
+    padding-right: 100px;
+    justify-content: center;
+}
+
+button {
+    /* border: 5px solid white;
+    width: 300px; */
+    border: 2px solid rgb(224, 224, 224);
+    border-radius: 10px;
+    padding-left: 20px;
+    background-color: rgb(113, 220, 255);
+}
+
+button:hover {
+    background-color: lightcoral;
+}
+
+.add_container {
+    display: flex;
+    justify-content: center;
+}
+
+.todo_list {
+    /* background-color: rebeccapurple; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
